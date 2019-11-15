@@ -4,6 +4,7 @@ import Counter from './counter';
 class Counters extends Component {
    
     render() { 
+      console.log("2.2....Counters - Rendered")
       //Using destructuring way
       const { onReset, counters, onDelete, onIncrement }= this.props;
         return ( 

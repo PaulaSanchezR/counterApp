@@ -14,6 +14,22 @@ class App extends Component {
         {id:4, value:0}
     ]
  }
+       // MOUNTING FACE
+        // the consturctor is call only once when the intaces of the class is created
+        //great oportunity to initializing the properties one comun is intialize the state with the props recive from the outside
+        // like this.state=this.props.something  noooooo this this.setState() ==> only when is render an place on the DOM
+        constructor (){
+          super();
+          console.log ('1....App-Constructor')
+        }
+       // this method is call after the component is render into the dom
+       // and it is the perfect place to make AJAX calls to get data from the server
+       //
+        componentDidMount(){
+          // list of movies from the server and then pass the list to the movie
+          // this.setState({ movies })
+          console.log("3....App-componenDidMount-Mounted")
+        }
 
  handleIncrement = counter => {
     // create new counter array with the spray operator we are clonning the array
@@ -51,6 +67,8 @@ class App extends Component {
  }
 
   render() { 
+    // when a component is render all his children are render
+    console.log("2....App-render ")
     return ( 
     <React.Fragment>
       <NavBar 

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
-// Stateless Function Componnet is when you dont have stete
+// Stateless Function Componnet is when you dont have stete and we can not use
+// a lifecycle hooks on stateless components
 // regular way
 //const Navbar = props =>{
     //using object destructuriing we dont want to repeaty props. several times
     const Navbar = ({ totalCounters}) =>{
-
+        console.log("2.1...NavBar - Render")
     return(
         <nav className="navbar navbar-light bg-light">
                  <a className ="navbar-brand" href="#">

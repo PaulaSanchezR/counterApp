@@ -52,8 +52,29 @@ class Counter  extends Component {
             // doHadleIncrement = () =>{
             //     this.handleIncrement( { id: 1})
             // }
+
+
+    componentDidUpdate(prevProps, prevState) {   
+        console.log("SECOND FACE UPDATE")             
+        console.log('prevProps', prevProps);
+        console.log('prevState', prevState);
+        // // we can ask this
+        // if(prevProps.counter.value !== this.props.counter.value){
+        //     // Ajax call and get new data from the server
+        //     // we can deside if we  need to make another call to the server
+        // }
+    }   
+    
+    componentWillUnmount(){
+        // it is call just when the component is remove from the dom
+        // we have time for a clean up remove timer or we can dial with
+        // memory licks 
+        console.log('Counter - Unmount')
+
+    }
     render() { 
         //console.log ('props', this.props)
+        console.log("2.3....Counter - Rendered")
        return(
         <div>
             {/*  when we recive the children {this.props.children} */}
